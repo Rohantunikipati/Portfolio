@@ -1,0 +1,566 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: "Satoshi";
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    /* scroll-behavior: smooth; */
+    /* cursor: none; */
+    transition: background-color 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+*::selection{
+    background-color: black;
+    color: white;
+}
+.nav-bar{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.nav-bar .nav-left h1{
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+.nav-bar .nav-left h1 span{
+    font-size: 25px;
+}
+.nav-right .links{
+    width: 400px;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+}
+.links button{
+    color: wheat;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+}
+.dark{
+    background-color: black;
+    color: rgb(209 209 199 );
+}
+.dark a{
+    color: rgb(209 209 199 );
+}
+.dark button{
+    background-color: rgb(209 209 199 );
+    color: black;
+}
+.page1{
+    margin-top: 80px;
+    width: 100vw;
+    height: calc(100% - 80px);
+    position: relative;
+}
+.page1 .img{
+    position: absolute;
+    width: 850px;
+    height: 600px;
+    z-index: 0;
+    top: 0;
+    left: 21%;
+}
+.page1 .img img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    filter: brightness(120%);
+}
+.headings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+.headings h1{
+    font-size: 120px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+/* .overlay10 h1{
+    color: rgba(0, 0, 0, 0.382);
+    -webkit-background-clip: text;
+    background-image: url(https://media0.giphy.com/media/BfpZpRVA2rVDy/200w.webp?cid=ecf05e47yq7sgjc3c2s82pu40iklyol8rgo4i8nr4h0r6bqo&ep=v1_gifs_search&rid=200w.webp&ct=g);
+} */
+.overlay20 h1{
+    color: rgba(0, 0, 0, 0.382);
+    /* -webkit-background-clip: text;
+    background-image: url(https://media3.giphy.com/media/3NeSk2IVEd2FYUQEcM/200w.webp?cid=ecf05e47115jvaveumaq4h7cbpcwcs7zsa6gnake5ptrr1ra&ep=v1_gifs_search&rid=200w.webp&ct=g); */
+    color: transparent;
+    -webkit-text-stroke: 8px black;
+}
+.page2{
+    width: 100%;
+    height: 600px;
+    /* background-color: black; */
+}
+.page2 p{
+    padding: 20px 55px;
+    line-height: 100px;
+    font-size: 100px;
+    font-weight: 600;
+    word-spacing: -6px;
+    color: rgb(209 209 199 );
+}
+.page3{
+    background-color: black;
+}
+.heading{
+    font-size: 120px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -5px;
+    word-spacing: -10px;
+    text-align: center;
+    color: rgb(140 140 115 );
+}
+.info{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 80px;
+    display: flex;
+    /* align-items: center; */
+    gap: 10px;
+}
+.infoleft{
+    overflow: hidden;
+    border-radius: 10px;
+    width: 50%;
+    height: 120vh;
+}
+.infoleft img{
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+}
+.inforight {
+    padding: 60px;
+    width: 50%;
+    height: fit-content;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.information h1{
+    font-size: 40px;
+    font-weight: 700;
+    word-spacing: -5px;
+}
+.information p{
+    font-size: 20px;
+    color: #777;
+}
+.page4{
+    margin-top: 100px;
+    width: 100%;
+    padding: 0px 100px;
+}
+.expertises{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+}
+.expleft{
+    width: 40%;
+}
+.expleft h1{
+    font-size: 50px;
+}
+.expleft p{
+    font-size: 20px;
+}
+.expright{
+    margin-left: 150px;
+}
+.expright ul li{
+    color:rgb(140 140 115 ) ;
+    list-style: none;
+    font-size: 50px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0.8;
+}
+.second{
+    margin-top: 80px;
+}
+.txt{
+    margin-top: 40px;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: rgb(140 140 115 );
+    overflow: hidden;
+}
+.txtleft,.txtright{
+    width: 1500%;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.txtleft span,.txtright span{
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(140 140 115 );
+}
+.txtright{
+    margin-left: -50%;
+}
+.page5{
+    height: auto;
+    padding-block: 50px;
+}
+.projects{
+    width: 100%;
+}
+.project1{
+    width: 85%;
+    margin-left: 100px;
+}
+.project .img-container{
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.project .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.project .img-container:hover{
+    border-radius: 20px;
+}
+.project .img-container img:hover{
+    scale: 1.1;
+}
+
+.project .projectDetails{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.project .projectDetails .btns button{
+    padding: 5px 25px;
+    border-radius: 20px;
+    border: 2px solid rgb(140 140 115 );
+    background-color: transparent;
+    font-size: 20px;
+    color: rgb(140 140 115 );
+}
+.project .projectDetails h3{
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+.project .projectDetails h4{
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+.project2{
+    margin-top: 100px;
+    margin-inline:100px ;
+    display: flex;
+    justify-content: space-between;
+}
+.project2 .projectleft{
+    width: 55%;
+    height: 120vh;
+}
+.project2 .projectright{
+    margin-top: 22%;
+    width: 40%;
+    height: 50vh;
+}
+.project3{
+    margin-top: 100px;
+    margin-inline:100px ;
+    display: flex;
+    justify-content: space-between;
+}
+.project3 .projectleft{
+    width: 65%;
+    height: 100vh;
+}
+.project3 .projectright{
+    margin-top: -10%;
+    width: 30%;
+    height: 50vh;
+}
+.overlay{
+    overflow: hidden;
+}
+.overlay .heading{
+    transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateY(100%);
+}
+.overlay2{
+    overflow: hidden;
+}
+.overlay2 .heading{
+    transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateY(100%);
+}
+.overlay3{
+    overflow: hidden;
+}
+.overlay3 .heading{
+    transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateY(100%);
+}
+.mini-circle{
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    background-color: rgb(140 140 115 );
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* mix-blend-mode: difference; */
+}
+.mini-circle i{
+    transform: rotate(-45deg);
+}
+.overlay10{
+    overflow: hidden;
+}
+.overlay10 h1{
+    transform: translateY(100%);
+}
+.overlay20{
+    overflow: hidden;
+}
+.overlay20 h1{
+    transform: translateY(100%);
+}
+.overlay30{
+    overflow: hidden;
+}
+.overlay30 h1{
+    transform: translateY(100%);
+}
+.page6{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 60px;
+}
+.pagetop,.pagebottom{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: black;
+    text-transform: uppercase;
+    font-size: 200px;
+    font-weight: 900;
+    overflow: hidden;
+    color: rgb(140 140 115 );
+}
+.pagetop{
+    top:0;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.pagebottom{
+    bottom: 0%;
+    background-color: black;
+}
+.pagetop .contact{
+    left: 3%;
+    top: 65%;
+    position: absolute;
+}
+.pagebottom .contact{
+    left: 3%;
+    bottom: 65%;
+    position: absolute;
+}
+.pagecenter{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #888; */
+    padding: 20px 50px;
+}
+.details{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 60px;
+}
+.detleft{
+    width: 60%;
+    height: 100vh;
+    /* background-color: green; */
+    padding: 40px 50px;
+}
+.ideas{
+    width: 80%;
+    /* background-color: palevioletred; */
+}
+.ideas h1{
+    font-size: 50px;
+    line-height: 50px;
+}
+.ideas p{
+    margin-top: 20px;
+    width: 80%;
+    font-size: 25px;
+    word-spacing: -3px;
+}
+.detleft textarea{
+    border: none;
+    font-size: 15px;
+    background-color: transparent;
+    border-bottom: solid rgb(140 140 115 ) 2px;
+}
+#name{
+    margin-top: 100px;
+    width: 40%;
+}
+#mail{
+    margin-left: 20px;
+    margin-top: 100px;
+    width: 40%;
+}
+#comment{
+    width: 100%;
+    margin-top: 100px;
+}
+.detleft button{
+    padding: 7px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 60px;
+    border: solid 1px black;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+.detleft button::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+    background-color: rgb(140 140 115);
+    transition-duration: 0.5s;
+}
+.detleft button:hover{
+    transition-duration: 0.5s;
+    color: white;
+    border: white 1px solid;
+}
+.detleft button:hover::after{
+    left: 0;
+}
+
+.detright{
+    width: 30%;
+    height: 70%;
+    /* background: pink; */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.box1{
+    width: 100%;
+    height: 140px;
+}
+.box1 h1{
+    font-size: 25px;
+}
+.box1 p{
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.box2{
+    width: 100%;
+    height: 200px;
+    /* background-color: red; */
+}
+.box2 h1{
+    font-size: 25px;
+}
+.box2 li{
+    list-style: none;
+    margin-top: 10px;
+    font-size: 22px;
+    padding-left: 20px;
+}
+.box3{
+    width: 100%;
+    height: 160px;
+}
+.box3 h1{
+    font-size: 25px;
+}
+.box3 p{
+    font-size: 20px;
+    line-height: 40px;
+}
+.scroll{
+    font-size: 8px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: rotate(90deg);
+    color: rgb(140 140 115);
+    z-index: 99;
+}
+.scroll::after{
+    content: "";
+    width: 0px;
+    height: 5px;
+    background-color: rgb(140 140 115);
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    border-radius: 5px;
+    animation: swipe 2s cubic-bezier(0.19, 1, 0.22, 1) 0s infinite;
+}
+@keyframes swipe {
+   0%,100%{
+    width: 0px;
+   }
+   50%{
+    width: 100px;
+   }
+}
